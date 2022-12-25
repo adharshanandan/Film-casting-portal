@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DirectorMaster.master.cs" Inherits="Online_Film_Casting_Portal.DirectorPage.DirectorMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/all.css" rel="stylesheet" />
+   
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+   <body style="background-image:url(../HomePage/darkvig.jpg);width:100%;background-repeat:no-repeat;background-size:cover" >
+   
+     <form id="form2" runat="server">
+        <div class="auto-style1 effect1" style="background-color:#F2F2F2;">        
+ <nav class="navbar navbar-expand-lg navbar-light fs-5 ">
+  <div class="container-fluid">
+    <a class="navbar-brand" >
+         <asp:Image ID="Image2" runat="server" Height="128px" ImageUrl="../Logo/casting-call.png" Width="130px" />
+    </a>
+     <h1 class="title p-3 mb-2 mb-lg-0 mx-5">FILM CASTING PORTAL</h1> 
+     
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav p-3 mb-2 ms-auto mb-lg-0">
+
+          <asp:Image ID="ImgProPicIcon" class="rounded-circle" Height="60px" Width="60px" runat="server" />
+           <li class="nav-item p-3">        
+              <asp:Button ID="BtnLogOutMaster" class="btn btn-lg align-middle btn-outline-danger" CausesValidation="false" runat="server" Text="Logout" OnClick="BtnLogOutMaster_Click"  />
+          
+        </li>
+
+  
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+</div>
+          
+        <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body ">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+            <asp:Menu runat="server" Orientation="Horizontal" >
+     <Items >
+         
+         <asp:MenuItem Text="Profile" Value="Profile" NavigateUrl="~/DirectorPage/DirectorProfile.aspx" ></asp:MenuItem>
+         
+         <asp:MenuItem Text="Applicants" Value="Applicants" NavigateUrl="~/DirectorPage/ApplicantListPage.aspx"></asp:MenuItem>
+          <asp:MenuItem Text="Create a call" Value="Create Casting Call" NavigateUrl="~/DirectorPage/CastingCall.aspx" ></asp:MenuItem>
+            <asp:MenuItem  Text="View Calls" Value="View Call" NavigateUrl="~/DirectorPage/UpdateCalls.aspx"></asp:MenuItem>
+                   
+             
+         <asp:MenuItem Text="Raise a Complaint" Value="Profile" NavigateUrl="~/DirectorPage/RaiseComlplaint.aspx"  ></asp:MenuItem>
+         
+     </Items>
+                <StaticHoverStyle ForeColor="White" />
+                <StaticMenuItemStyle Font-Size="25px" ForeColor="Silver" HorizontalPadding="50px" />
+         </asp:Menu>
+
+         </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+ 
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+               
+            </asp:ContentPlaceHolder>
+       
+ 
+        <div class="text-center p-4" style="background-color:#F2F2F2">
+    © 2022 Copyright:
+    <a class="text-reset fw-bold" href="https://www.linkedin.com/in/adharsh-anandan-410639255/">Adharsh Anandan</a>
+  </div>
+
+    </form>
+   
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+       
+</body>
+</html>

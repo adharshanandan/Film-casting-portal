@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="Online_Film_Casting_Portal.AdminPage.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/all.css" rel="stylesheet" />
+    <link href="../css/fontstyles.css" rel="stylesheet" />
+    <link href="../Content/font-awesome.css" rel="stylesheet" />
+    <link href="../css/ShadowEffect.css" rel="stylesheet" />
+    <link href="../css/NavbarProps.css" rel="stylesheet" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <style type="text/css">
+        .auto-style1 {
+            height: 158px;
+        }
+        
+    </style>
+</head>
+<body style="background-color:slategray;width:100%;background-repeat:no-repeat;background-size:cover">
+   
+     <form id="form1" runat="server">
+        
+        
+        <div class="auto-style1 effect1" style="background-color:#F2F2F2;background-attachment:fixed">
+
+         
+ <nav class="navbar navbar-expand-lg navbar-light fs-5 ">
+  <div class="container-fluid">
+    <a class="navbar-brand" >
+         <asp:Image ID="Image1" runat="server" Height="128px" ImageUrl="../Logo/casting-call.png" Width="130px" />
+    </a>
+     
+     
+     <h1 class="title p-3 mb-2 mb-lg-0 mx-5">FILM CASTING PORTAL</h1> 
+     
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav p-3 mb-2 ms-auto mb-lg-0">
+      
+       
+    
+      
+           <li class="nav-item p-3">        
+              <asp:Button ID="BtnLogOutMaster" class="btn btn-lg align-middle btn-outline-danger" CausesValidation="false" runat="server" Text="Logout" OnClick="BtnLogOutMaster_Click" />
+          
+        </li>
+
+  
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+</div>
+          
+        <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body ">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+            <asp:Menu runat="server" Orientation="Horizontal" ForeColor="#c0c0c0" DynamicMenuItemStyle-BackColor="#212529" DynamicMenuItemStyle-VerticalPadding="10" DynamicHoverStyle-ForeColor="white" DynamicMenuItemStyle-HorizontalPadding="10" Font-Size="25px" >
+     <Items >
+         <asp:MenuItem Text="Visitor Messages" Value="VisitorMessages" NavigateUrl="~/AdminPage/VisitorMessage.aspx"></asp:MenuItem>
+         <asp:MenuItem Text="Complaints" Value="Complaints" NavigateUrl="~/AdminPage/ComplaintsPage.aspx"></asp:MenuItem>
+         <asp:MenuItem Text="User Database" Value="User Database">
+             <asp:MenuItem  Text="Actors"  Value="Actors" NavigateUrl="~/AdminPage/UserDatabase/ActorsDetails.aspx"></asp:MenuItem>
+             <asp:MenuItem Text="Directors"  Value="Directors" NavigateUrl="~/AdminPage/UserDatabase/DirectorDetails.aspx" ></asp:MenuItem>
+             
+         </asp:MenuItem>
+         <asp:MenuItem Text="FAQs" Value="FAQs" NavigateUrl="~/AdminPage/FAQS/FaqUpdatePage.aspx"></asp:MenuItem>
+         
+     </Items>
+                <StaticHoverStyle ForeColor="White" />
+                <StaticMenuItemStyle Font-Size="25px" ForeColor="Silver" HorizontalPadding="50px" />
+         </asp:Menu>
+        
+
+         </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+ 
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+               
+            </asp:ContentPlaceHolder>
+       
+ 
+        <div class="text-center p-4 mt-5" style="background-color:#F2F2F2">
+    © 2022 Copyright:
+    <a class="text-reset fw-bold" href="https://www.linkedin.com/in/adharsh-anandan-410639255/">Adharsh Anandan</a>
+  </div>
+
+    </form>
+   
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/FontAnimations.js"></script>
+    
+</body>
+</html>
+
+
